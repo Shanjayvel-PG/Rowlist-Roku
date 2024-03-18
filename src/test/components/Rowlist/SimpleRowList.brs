@@ -27,7 +27,7 @@ function GetRowListContent() as object
         row.title = "Display Images"
         ' row.title = "Title " + stri(numRows)
         image = ["https://i.ytimg.com/vi/LBXSI14HUTg/maxresdefault.jpg","https://i.ytimg.com/vi/So9YnEhrs0M/maxresdefault.jpg","https://i.ytimg.com/vi/2gFqPwj7pVY/maxresdefault.jpg","https://proartinc.net/wp-content/uploads/2021/03/Higher-than-Sky.jpg","https://th.bing.com/th/id/OIP.77QcPjHj0VUV7EpqRdT_1wHaEK?pid=ImgDet&w=207&h=116&c=7"]
-        duration=["1:00","2:00","3:00","4:00","5:00"]
+        duration=["3:48","4:40","3:55","4:10","4:25"]
         for i = 0 to 4
             item = row.CreateChild("SimpleRowListItemData")
             item.posterUrl = image[i]
@@ -40,8 +40,14 @@ end function
 
 function onRowItemFocused() as void
     row = m.top.rowItemFocused[0]
+
     ' col = m.top.rowItemFocused[1]
     print "Row Focused: " + stri(row)
-    print "hello"
     ' print "Col Focused: " + stri(col)
 end function
+
+function onRowItemSelected() as void
+    row = m.top.rowItemSelected[0]
+    print "hello"
+end function
+
