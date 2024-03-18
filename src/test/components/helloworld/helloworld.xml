@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="HelloWorld" extends="Scene">
+
+  <script type="text/brightscript" uri="helloworld.brs" />
+
+  <children>
+    <Poster id="bgImage" uri="pkg:/images/bg.jpeg" height="1080" width="1920" />
+    <LayoutGroup id="LayoutGroup" itemSpacings="[20,30,20]" translation="[50, 50]">
+      <Label id="exampleLabel" font="font:LargeBoldSystemFont" color="#ffffff"
+        text="The Pacific Coast " />
+
+      <Label id="time" color="ffffff" text="27:59" />
+
+      <Label id="exampleLabel" color="ffffff"
+        text="Experience the natural beauty of the Pacific Coast from Washington State to Southern California. See breathtaking video of spectacular sunsets and iconic locations along the Big sur coast. The photography and cinematography of Olof and Elizabeth Carmel are paired with relaxing music to provide an exquisite ambient art experience for TV and mobile devices."
+        wrap="true" width="775" />
+
+      <LayoutGroup id="LayoutGroup2" itemSpacings="[15]" layoutDirection="horiz">
+        <Rectangle id="btnAccess" width="200" height="50" color="#000000">
+          <Label id="btntext1" width="200" height="50" text="Get Access" vertAlign="center"
+            horizAlign="center" />
+        </Rectangle>
+
+        <Rectangle id="btnTrailer" width="200" height="50" color="#000000">
+          <Label id="btntext2" width="200" height="50" text="Trailer" vertAlign="center"
+            horizAlign="center" />
+        </Rectangle>
+
+      </LayoutGroup>
+
+      <SimpleRowList id="theRowList"  />
+
+    </LayoutGroup>
+
+
+
+  </children>
+
+</component>

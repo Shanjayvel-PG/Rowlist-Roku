@@ -1,0 +1,7 @@
+components: 'pkg:/components'
+manifest:
+  channelName: 'Ambition'
+  major: '2'
+  minor: '3'
+  build: '2'
+  splash_color: '#0d1d41'
