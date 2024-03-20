@@ -1,5 +1,5 @@
 function init()
-    print "in SimpleRowListPanel init()"
+    ' print "in SimpleRowListPanel init()"
     m.top.itemComponentName = "SimpleRowListItem"
     m.top.numRows = 2
     m.top.itemSize = [1200,213]
@@ -17,6 +17,8 @@ function init()
     m.top.visible = true
     m.top.SetFocus(true)
     m.top.ObserveField("rowItemFocused", "onRowItemFocused")
+    m.top.ObserveField("rowItemSelected", "onItemSelected")
+    m.Nextpage=m.top.findNode("Nextpage")
 end function
 
 function GetRowListContent() as object
@@ -45,7 +47,9 @@ function onRowItemFocused() as void
     ' print "Col Focused: " + stri(col)
 end function
 
-function onRowItemSelected() as void
-    row = m.top.rowItemSelected[0]
+function onItemSelected(event as object)
+    selectedNode = event.getRoSGnode()
+    selectedIndex = event.getData()
+    selectedItem = selectedNode.content.getChild(selectedIndex[0]).getChild(selectedIndex[1])
+    print selectedItem
 end function
-

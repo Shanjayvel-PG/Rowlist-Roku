@@ -1,9 +1,12 @@
-sub init()
-    m.top.backgroundURI = "pkg:/images/rsgde_bg_hd.jpg"
+function init()
+    m.top.itemComponentName = "Nextpage"
+    m.display = m.top.findNode("display")
+  end function
 
-      example = m.top.findNode("exampleButtonGroup")
 
-      example.buttons = [ "OK", "Cancel" ]
-
-    m.top.setFocus(false)
-end sub
+function itemContentChanged() as void
+    itemData = m.top.itemContent
+    m.display.uri = itemData.posterUrl
+    m.itemduration.text = itemData.duration
+    m.itemText.text = itemData.labelText
+  end function

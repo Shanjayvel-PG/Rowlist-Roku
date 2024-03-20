@@ -29,6 +29,8 @@
       </LayoutGroup>
 
       <SimpleRowList id="theRowList"  />
+      
+      <Nextpage id="Nextpage"  />
 
     </LayoutGroup>
 

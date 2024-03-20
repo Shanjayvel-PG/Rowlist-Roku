@@ -1,9 +1,19 @@
 sub init()
-    m.top.backgroundURI = "pkg:/images/rsgde_bg_hd.jpg"
+    m.posterUrl = m.top.findNode("posterUrl")
+end sub
 
-      example = m.top.findNode("exampleButtonGroup")
 
-      example.buttons = [ "OK", "Cancel" ]
 
-    m.top.setFocus(false)
+sub choosePhotos()
+    maxCount = 5
+    photoList = []
+    for index = 1 to maxCount
+        photoItem = {
+            
+            uri: index.toStr()
+        }
+        photoList.push(photoItem)
+    end for
+    m.photoGrid.callFunc("build", photoList)
+    m.photoGrid.visible = "true"
 end sub
