@@ -10,7 +10,7 @@ sub init()
     ' m.infoPanecopy = m.top.findNode("infoPanecopy")
     ' m.examplePoster = m.top.findNode("examplePoster")
     m.top.observeField("focusedChild", "onFocusedChild")
-    m.btnAccess.setFocus(true)
+    m.btnAccess.setFocus(true) 
     m.btnTrailer.setFocus(true)
     ' m.top.focusable = true
     ' m.exampleButton = m.top.findNode("exampleButton")    
@@ -72,5 +72,4 @@ function onKeyEvent(key as string, press as boolean) as boolean
   
     return handled
 end function
-
 

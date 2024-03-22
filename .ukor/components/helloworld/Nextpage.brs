@@ -1,19 +1,12 @@
-sub init()
-    m.posterUrl = m.top.findNode("posterUrl")
-end sub
+function init()
+    m.top.itemComponentName = "Nextpage"
+    m.display = m.top.findNode("display")
+  end function
 
 
-
-sub choosePhotos()
-    maxCount = 5
-    photoList = []
-    for index = 1 to maxCount
-        photoItem = {
-            
-            uri: index.toStr()
-        }
-        photoList.push(photoItem)
-    end for
-    m.photoGrid.callFunc("build", photoList)
-    m.photoGrid.visible = "true"
-end sub
+function itemContentChanged() as void
+    itemData = m.top.itemContent
+    m.display.uri = itemData.posterUrl
+    m.itemduration.text = itemData.duration
+    m.itemText.text = itemData.labelText
+  end function

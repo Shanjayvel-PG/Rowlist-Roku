@@ -2,9 +2,9 @@
 <component name="Nextpage" extends="Group">
     <script type="text/brightscript" uri="pkg:/components/helloworld/Nextpage.brs" />
     <interface>
-        <field id="posterUrl" type="string"  />
+        <field id="Displayimage" type="string"  />
     </interface>
     <children>
-        <Poster id="Display"  height="1080" width="1920" />
+        <Poster id="display"  height="1080" width="1920" />
     </children>
 </component>
