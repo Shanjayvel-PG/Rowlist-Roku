@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component name="Nextpage" extends="Group">
     <script type="text/brightscript" uri="pkg:/components/helloworld/Nextpage.brs" />
+    <script type="text/brightscript" uri="pkg:/components/Rowlist/SimpleRowList.brs" />
     <interface>
-        <field id="Displayimage" type="string"  />
-    </interface>
+		<function name="onItemSelected" />
+	</interface>
     <children>
         <Poster id="display"  height="1080" width="1920" />
     </children>
