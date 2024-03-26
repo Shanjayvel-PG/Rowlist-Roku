@@ -52,4 +52,5 @@ function onItemSelected(event as object)
     selectedIndex = event.getData()
     selectedItem = selectedNode.content.getChild(selectedIndex[0]).getChild(selectedIndex[1])
     print selectedItem
+    m.Nextpage.callFunc("build",selectedItem.posterUrl)
 end function
