@@ -6,5 +6,8 @@
 
 <script type="text/brightscript" uri="./SimpleRowList.brs" />
 
+<children>
+        <Label id="Image"   />
+</children>
 
 </component>
