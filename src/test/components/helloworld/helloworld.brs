@@ -37,6 +37,11 @@ sub onFocusedChild(event as object)
   print "locationInfo" focusedChild
 end sub
 
+sub onImage(event as object)
+  ImageInfo = event.getData()
+  m.viewModel.callFunc("build", uri)
+end sub
+
 
 function onKeyEvent(key as string, press as boolean) as boolean
     handled = true

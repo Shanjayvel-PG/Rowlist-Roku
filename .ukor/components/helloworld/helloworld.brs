@@ -14,6 +14,7 @@ sub init()
     ' m.top.focusable = true
     ' m.exampleButton = m.top.findNode("exampleButton")    
     m.theRowList = m.top.FindNode("theRowList")
+    m.Nextpage.observeField("ImageInfo", "onImage")
     m.theRowList.SetFocus(true)
 end sub
 
@@ -35,6 +36,11 @@ end sub
 sub onFocusedChild(event as object)
   focusedChild = event.getData()
   print "locationInfo" focusedChild
+end sub
+
+sub onImage(event as object)
+  ImageInfo = event.getData()
+  m.viewModel.callFunc("build", uri)
 end sub
 
 
