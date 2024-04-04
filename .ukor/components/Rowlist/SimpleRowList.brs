@@ -18,7 +18,7 @@ function init()
     m.top.SetFocus(true)
     m.top.ObserveField("rowItemFocused", "onRowItemFocused")
     m.top.ObserveField("rowItemSelected", "onItemSelected")
-    m.Nextpage=m.top.findNode("Nextpage")
+
 end function
 
 function GetRowListContent() as object
@@ -52,5 +52,6 @@ function onItemSelected(event as object)
     selectedIndex = event.getData()
     selectedItem = selectedNode.content.getChild(selectedIndex[0]).getChild(selectedIndex[1])
     print selectedItem
-    m.Nextpage.callFunc("build",selectedItem.posterUrl)
+    ' m.Nextpage.callFunc("build",selectedItem.posterUrl)
+    m.top.ImageInfo = selectedItem.posterUrl
 end function

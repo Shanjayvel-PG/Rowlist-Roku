@@ -15,6 +15,7 @@ sub init()
     ' m.exampleButton = m.top.findNode("exampleButton")    
     m.theRowList = m.top.FindNode("theRowList")
     m.theRowList.SetFocus(true)
+    m.theRowList.observeField("ImageInfo","onImageSelected")
 end sub
 
 sub getaccess()
@@ -34,12 +35,12 @@ end sub
 
 sub onFocusedChild(event as object)
   focusedChild = event.getData()
-  print "locationInfo" focusedChild
+  ' print "locationInfo" focusedChild
 end sub
 
-sub onImage(event as object)
+sub onImageSelected(event as object)
   ImageInfo = event.getData()
-  m.viewModel.callFunc("build", uri)
+  print ImageInfo
 end sub
 
 
