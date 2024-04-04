@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?> 
 <component name="SimpleRowList" extends="RowList" >
 <interface>
-        <field id="uri" type="string" />
+        <field id="ImageInfo" type="string" />
 </interface>
 
 <script type="text/brightscript" uri="./SimpleRowList.brs" />

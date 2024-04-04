@@ -14,7 +14,6 @@ sub init()
     ' m.top.focusable = true
     ' m.exampleButton = m.top.findNode("exampleButton")    
     m.theRowList = m.top.FindNode("theRowList")
-    m.Nextpage.observeField("ImageInfo", "onImage")
     m.theRowList.SetFocus(true)
 end sub
 
