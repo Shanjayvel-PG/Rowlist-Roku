@@ -37,7 +37,7 @@ sub onFocusedChild(event as object)
   focusedChild = event.getData()
   ' print "locationInfo" focusedChild
 end sub
-
+'/
 sub onImageSelected(event as object)
   ImageInfo = event.getData()
   print ImageInfo
