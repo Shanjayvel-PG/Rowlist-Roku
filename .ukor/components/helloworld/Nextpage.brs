@@ -4,5 +4,5 @@ function init()
 end function
 
 function build(url as string)
-    display.url=url
+    m.display.url=url
 end function
