@@ -4,5 +4,9 @@ function init()
 end function
 
 function build(url as string)
-    m.display.url=url
+    print build
+end function
+
+function onDisplayImage()
+
 end function
