@@ -4,10 +4,7 @@ function init()
 end function
 
 function build(url as string)
-    onDisplayImage()
-    print build
+    m.display.uri = url
 end function
 
-function onDisplayImage()
 
-end function

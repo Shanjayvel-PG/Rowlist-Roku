@@ -16,6 +16,7 @@ sub init()
     m.theRowList = m.top.FindNode("theRowList")
     m.theRowList.SetFocus(true)
     m.theRowList.observeField("ImageInfo","onImageSelected")
+    m.Nextpage=m.top.findNode("Nextpage")
 end sub
 
 sub getaccess()
@@ -40,6 +41,7 @@ end sub
 
 sub onImageSelected(event as object)
   ImageInfo = event.getData()
+  m.Nextpage.callFunc("build",ImageInfo)
   print ImageInfo
 end sub
 
@@ -48,30 +50,7 @@ function onKeyEvent(key as string, press as boolean) as boolean
     handled = true
     if press
       if key = "OK"
-          if m.btnAccess.hasFocus()
-            getaccess()
-            m.btnAccess.text = "Done"
-          else if m.btnTrailer.hasFocus()
-            trailer()
-            m.btnAccess.text = "done"
-          end if
-      else if key = "right"
-          if m.btnAccess.hasFocus()
-              m.btnTrailer.setFocus(true)
-              m.btnAccess.setFocus(false)
-              m.btnTrailer.color = "#648c11"
-              m.btnAccess.color = "#000000"
-          end if
-      else if key = "left"
-          if m.btnTrailer.hasFocus()
-              m.btnAccess.setFocus(true)
-              m.btnAccess.color = "#648c11"
-              m.btnTrailer.color = "#000000"
-          end if
-      else
-          if key = "back"
-              setFocusToDefault()
-          end if
+          
       end if
   end if
   

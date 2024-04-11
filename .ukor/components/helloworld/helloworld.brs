@@ -16,6 +16,7 @@ sub init()
     m.theRowList = m.top.FindNode("theRowList")
     m.theRowList.SetFocus(true)
     m.theRowList.observeField("ImageInfo","onImageSelected")
+    m.Nextpage=m.top.findNode("Nextpage")
 end sub
 
 sub getaccess()
@@ -40,6 +41,7 @@ end sub
 
 sub onImageSelected(event as object)
   ImageInfo = event.getData()
+  m.Nextpage.callFunc("build",ImageInfo)
   print ImageInfo
 end sub
 
