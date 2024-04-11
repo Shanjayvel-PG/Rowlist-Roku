@@ -5,6 +5,7 @@ end function
 
 function build(url as string)
     onDisplayImage()
+    print build
 end function
 
 function onDisplayImage()
