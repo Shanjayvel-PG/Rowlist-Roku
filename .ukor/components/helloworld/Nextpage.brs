@@ -9,14 +9,6 @@ function build(url as string)
 end function
 
 
-function onKeyEvent(key as string, press as boolean) as boolean
-    handled = true
-    if press
-      if key = "back"
-        handled = false     
-      end if
-    end if
-    return handled
-end function
+
 
 
