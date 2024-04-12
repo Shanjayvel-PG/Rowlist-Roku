@@ -1,5 +1,5 @@
 sub init()
-    ' m.top.setFocus(true)
+    m.top.setFocus(true)
     ' m.top.backgroundURI = "pkg:/images/backgroung.jpeg"
     m.btnAccess = m.top.findNode("btnAccess")
     m.btnTrailer = m.top.findNode("btnTrailer")
@@ -29,7 +29,7 @@ sub trailer()
 end sub
 
 sub setFocusToDefault()
-  m.btnAccess.setFocus(true)
+  ' m.btnAccess.setFocus(true)
     m.btnAccess.color = "#648c11"
     m.btnTrailer.color = "#000000"
 end sub
@@ -50,8 +50,20 @@ function onKeyEvent(key as string, press as boolean) as boolean
   handled = true
   if press
     if key = "back"
-      handled = false
-    else if key = "up"     
+      ' m.display.uri = "false"
+    else if key = "up" 
+      m.btnAccess.setFocus(true)
+        setFocusToDefault() 
+    else if key = "right"
+      m.btnAccess.color = "#000000"
+      m.btnTrailer.color = "#648c11"
+    else if key = "left"
+      m.btnAccess.color = "#648c11"
+      m.btnTrailer.color = "#000000"
+    else if key = "down"
+       m.theRowList.SetFocus(true)
+       m.btnAccess.color = "#000000"
+      m.btnTrailer.color = "#000000"
     end if
   end if
   return handled
