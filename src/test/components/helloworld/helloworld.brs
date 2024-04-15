@@ -50,6 +50,8 @@ function onKeyEvent(key as string, press as boolean) as boolean
   handled = true
   if press
     if key = "back"
+      
+      ' m.theRowList.SetFocus(false)
       ' m.display.uri = "false"
     else if key = "up" 
       m.btnAccess.setFocus(true)
